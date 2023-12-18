@@ -1,4 +1,4 @@
-let target = 600851475143;
+const target = 2000000;
 
 const isPrime = (num: number): boolean => {
   for (let i = 2; i * i <= num; i++) {
@@ -22,18 +22,17 @@ function* primeGenerator() {
 
 const primeGen = primeGenerator();
 
-const factors: number[] = [];
-while (true) {
-  const nextPrime = primeGen.next().value!;
-
-  if (target % nextPrime === 0) {
-    target = target / nextPrime;
-    factors.push(nextPrime);
+const main = (): number => {
+  let sum = 0;
+  for (const prime of primeGen) {
+    if (prime < target) {
+      sum += prime;
+    } else {
+      break;
+    }
   }
 
-  if (nextPrime > target) break;
-}
+  return sum;
+};
 
-const allPrime = factors.every((fac) => isPrime(fac));
-
-console.log({ factors });
+console.log("answer: ", main());

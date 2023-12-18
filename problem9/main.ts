@@ -1,4 +1,4 @@
-const findPythagoreanTripletProduct = (sum) => {
+const findPythagoreanTripletProduct = (sum: number) => {
   for (let a = 1; a < sum; a++) {
     for (let b = a + 1; b < sum; b++) {
       let c = sum - a - b;

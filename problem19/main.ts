@@ -3,7 +3,7 @@ const endDate = new Date(2000, 11, 31);
 
 let firstSundayCount = 0;
 while (date <= endDate) {
-  if (date.getDay() === 0 && date.getDate() === 1) {
+  if (date.getDay() === 0) {
     firstSundayCount += 1;
   }
   date.setMonth(date.getMonth() + 1);

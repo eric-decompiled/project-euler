@@ -4,7 +4,7 @@ Run with: `ts-node problem1/main.ts`
 
 For best performance, first compile with:
 
-`tsc --outDir ./dist --target es6 problem23/main.ts`
+`tsc --outDir ./dist --target es6 problem1/main.ts`
 
 then use:
 

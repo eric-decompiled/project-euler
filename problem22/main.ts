@@ -12,8 +12,6 @@ const nameValues: number[][] = data
       .map((c) => c.charCodeAt(0) - 64)
   );
 
-console.log(nameValues);
-
 let answer = 0;
 
 for (const [index, values] of nameValues.entries()) {
